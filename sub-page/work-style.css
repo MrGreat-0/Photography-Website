@@ -11,6 +11,7 @@ body {
     width: 100%;
     color: #fff;
     -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
 }
 
 main {
