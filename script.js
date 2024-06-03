@@ -32,8 +32,9 @@ ScrollTrigger.refresh();
 // -----------------------------GSAP- for page animation-------------------------------- //
 
 var tl = gsap.timeline();
+let mm = gsap.matchMedia();
 
-if (window.innerWidth > 768) {
+mm.add("(min-width: 800px)", () => {
 
     tl.from("nav a", {
         y: -50,
@@ -119,28 +120,17 @@ if (window.innerWidth > 768) {
         }
     })
 
-}
+});
 
 // -----------------------------GSAP- for menu-------------------------------- //
-
-// // Define a function to disable scrolling
-// function disableScroll() {
-//     locoScroll.stop();
-//     locoScroll.destroy();
-// }
-
-// // Define a function to enable scrolling
-// function enableScroll() {
-//     locoScroll.init();
-//     locoScroll.start();
-// }
 
 var menu = document.querySelector(".menu i");
 var cross = document.querySelector("#contain-nav .m-btn");
 
 var mtl = gsap.timeline();
+let mmm = gsap.matchMedia();
 
-if (window.innerWidth <= 768) {
+mm.add("(max-width: 768px)", () => {
 
     mtl.to("#contain-nav",{
         right:0,
@@ -161,16 +151,14 @@ if (window.innerWidth <= 768) {
     mtl.pause();
     
     menu.addEventListener("click",function(){
-        // disableScroll();
         mtl.play();
     })
     
     cross.addEventListener("click",function(){
         mtl.reverse();
-        // enableScroll();
     })
 
-}
+});
 
 // ------------------------------------Loader-------------------------------------- //
 
@@ -212,5 +200,3 @@ if (window.innerWidth <= 768) {
   
 
 // ------------------------- //
-
-

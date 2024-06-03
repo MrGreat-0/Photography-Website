@@ -10,8 +10,11 @@ html,
 body {
     height: 100%;
     width: 100%;
-    color: #fff;
     overflow: hidden;
+}
+
+body {
+    color: #fff;
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -45,7 +48,7 @@ nav {
     display: none;
 }
 
-.m-btn{
+.m-btn {
     display: none;
 }
 
@@ -241,7 +244,7 @@ article {
     }
 
     .nav-prt a {
-        font-size: 2rem;
+        font-size: 3rem;
         font-weight: 500;
     }
 
@@ -252,7 +255,7 @@ article {
         right: 10%;
         padding: 0.5vw;
         border-radius: 50%;
-        font-size: 1.5rem;
+        font-size: 2rem;
         background-color: #ffffff;
         text-decoration: none;
         border: none;
@@ -264,7 +267,7 @@ article {
         -ms-transform: scalex(0);
         transform: scalex(0);
     }
-    
+
     .blob {
         height: 22rem;
         width: 24rem;
@@ -297,30 +300,34 @@ article {
 
 }
 
-/* @media (max-width:420px){
+@media (max-width:420px) {
 
     html {
         font-size: 60%;
     }
 
-    .abt p{
+    .abt p {
         width: 90%;
     }
 
 }
 
-@media (max-width:380px){
+@media (max-width:350px) {
+
+    html {
+        font-size: 53%;
+    }
+
+    .abt p {
+        width: 95%;
+    }
+
+}
+
+@media (max-width:300px) {
 
     html {
         font-size: 50%;
     }
 
 }
-
-@media (max-width:380px){
-
-    html {
-        font-size: 55%;
-    }
-
-} */

@@ -10,7 +10,6 @@ html,
 body {
     height: 100%;
     width: 100%;
-    overflow-x: hidden;
 }
 
 body {
@@ -386,7 +385,7 @@ header .h-bg::before {
     width: 100%;
     min-height: 100%;
     height: auto;
-    background: url(images/daniel-leone-v7daTKlZzaw-unsplash.jpg);
+    background: url(images/h-bg.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -415,7 +414,6 @@ main {
 
 .page1 {
     height: auto;
-    min-height: 100vh;
     width: 100%;
     position: relative;
     /* background-color: #0f0e13; */
@@ -424,7 +422,8 @@ main {
 
 .page1 .p1-top {
     width: 100%;
-    height: 40%;
+    /* min-height: 60vh; */
+    height: auto;
     padding: 5% 10%;
     position: relative;
     overflow: hidden;
@@ -437,7 +436,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url(images/joshua-rivera-usmhPmT5sj0-unsplash.jpg);
+    background: url(images/p1-top.jpg);
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -510,7 +509,8 @@ main {
 }
 
 .p1-bottom {
-    height: 100%;
+    /* max-height: 140vh; */
+    height: auto;
     width: 100%;
     padding: 0 10%;
     position: relative;
@@ -535,7 +535,7 @@ main {
     -ms-grid-rows: 1fr 2vw 1fr;
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 0px;
-    grid-row-gap: 2vw;
+    grid-row-gap: 26px;
     position: relative;
 }
 
@@ -640,7 +640,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url(images/visax-8oni9vTWj7U-unsplash.jpg);
+    background: url(images/page2.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -752,7 +752,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url(images/maximalfocus-VT4rx775FT4-unsplash.jpg);
+    background: url(images/page3.jpg);
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -816,7 +816,6 @@ main {
 
 .p3-container .p3-card:hover {
     background: rgb(23, 24, 54, 0.45);
-
 }
 
 @-webkit-keyframes float {
@@ -858,8 +857,8 @@ main {
 }
 
 .p3-card .p3-elem1 {
-    padding-bottom: 3vh;
-    margin-bottom: 3vh;
+    padding-bottom: 3vw;
+    margin-bottom: 3vw;
     border-bottom: rgba(128, 128, 128, 0.24) 0.5px solid;
     position: relative;
 }
@@ -913,7 +912,6 @@ main {
 .p3-card:hover h5 {
     opacity: 1;
 }
-
 
 footer {
     height: auto;
@@ -1006,6 +1004,11 @@ footer p {
 
 @media (max-width:768px) {
 
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
     html {
         font-size: 95%;
     }
@@ -1051,7 +1054,7 @@ footer p {
     }
 
     .nav-prt a {
-        font-size: 1.5rem;
+        font-size: 2.1rem;
         font-weight: 500;
     }
 
@@ -1062,7 +1065,7 @@ footer p {
         right: 10%;
         padding: 0.5vw;
         border-radius: 50%;
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         background-color: #ffffff;
         text-decoration: none;
         border: none;
@@ -1086,6 +1089,10 @@ footer p {
 
     header .h-bg h1 {
         line-height: 1.5;
+    }
+
+    .page1 {
+        padding-bottom: 10%;
     }
 
     .page1 .p1-top {
@@ -1125,6 +1132,10 @@ footer p {
         -ms-grid-columns: 1fr 1fr;
         grid-template-columns: repeat(2, 1fr);
         place-items: center;
+    }
+
+    .p1-bottom {
+        padding: 0 5%;
     }
 
     .p2-parts .p2-prt1 {
@@ -1177,6 +1188,7 @@ footer p {
     }
 
     .p3-container .p3-card {
+        background: rgb(23, 24, 54, 0.45);
         height: 35vmax;
         width: 25vmax;
     }
@@ -1192,6 +1204,23 @@ footer p {
         background-clip: initial;
         color: #fff;
         background-image: initial;
+    }
+
+    .p3-card .p3-elem1 h2 {
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        background-image: -o-linear-gradient(left, rgba(199, 17, 59, 1) 5%, rgba(228, 94, 81, 1) 100%);
+        background-image: -webkit-gradient(linear, left top, right top, color-stop(5%, rgba(199, 17, 59, 1)), to(rgba(228, 94, 81, 1)));
+        background-image: linear-gradient(90deg, rgba(199, 17, 59, 1) 5%, rgba(228, 94, 81, 1) 100%);
+    }
+
+    .p3-card .p3-elem1 h3 {
+        color: #fff;
+    }
+
+    .p3-card .p3-elem2 h5 {
+        opacity: 1;
     }
 
     footer p {
@@ -1212,6 +1241,14 @@ footer p {
 
     nav {
         height: 7vh;
+    }
+
+    .m-btn {
+        font-size: 1.7rem;
+    }
+
+    .nav-prt a {
+        font-size: 2.3rem;
     }
 
     .h-bg {
@@ -1267,6 +1304,38 @@ footer p {
     footer p {
         width: 100%;
         font-size: 0.8rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .p3-container .p3-card {
+        height: 28vmax;
+    }
+
+}
+
+@media (max-width: 350px) {
+
+    .p3-container .p3-card {
+        height: 32vmax;
+    }
+
+}
+
+@media (max-width: 320px) {
+
+    .p1-bottom .p1-belems {
+        grid-row-gap: 35px;
+    }
+
+}
+
+@media (max-width: 300px) {
+
+    .p1-bottom .p1-belems {
+        grid-row-gap: 40px;
     }
 
 }

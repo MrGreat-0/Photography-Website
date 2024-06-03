@@ -10,8 +10,11 @@ html,
 body {
     height: 100%;
     width: 100%;
-    color: #fff;
     overflow: hidden;
+}
+
+body {
+    color: #fff;
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -246,6 +249,38 @@ nav img {
 
     .info p a {
         font-size: 1.3rem;
+    }
+
+}
+
+@media (max-width:390px) {
+
+    .info p {
+        width: 85%;
+    }
+
+}
+
+@media (max-width:360px) {
+
+    .info p {
+        width: 90%;
+    }
+
+}
+
+@media (max-width:330px) {
+
+    .info p {
+        width: 96%;
+    }
+
+}
+
+@media (max-width:300px) {
+
+    .info p {
+        width: 100%;
     }
 
 }
