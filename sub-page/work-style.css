@@ -222,6 +222,46 @@ nav img {
     border: 0.5px solid #fff;
     padding: 0.6vw 1.5vw;
     border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    -webkit-transition: color 0.3s ease-in-out;
+    -o-transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
+}
+
+.bar a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(0);
+    -ms-transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%) scale(0);
+    height: 1vw;
+    width: 1vw;
+    border-radius: 50%;
+    background: aqua;
+    z-index: -1;
+    -webkit-transition: scale 0.3s ease-in-out;
+    -o-transition: scale 0.3s ease-in-out;
+    transition: scale 0.3s ease-in-out;
+}
+
+.bar a:hover::before {
+    -webkit-transform: translate(-50%, -50%) scale(20);
+    -ms-transform: translate(-50%, -50%) scale(20);
+    transform: translate(-50%, -50%) scale(20);
+}
+
+.bar a:hover {
+    color: #000;
+}
+
+.bar a:active {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
 }
 
 .box {
@@ -405,6 +445,16 @@ nav img {
         grid-column-gap: 20px;
         grid-row-gap: 20px;
         text-align: center;
+    }
+
+    .bar a:hover::before {
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+    }
+
+    .bar a:hover {
+        color: #fff;
     }
 
     .bar>*:nth-child(1) {
