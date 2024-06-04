@@ -938,6 +938,11 @@ footer {
     margin-bottom: 1vw;
 }
 
+.f-prt1 a {
+    text-decoration: none;
+    outline: none;
+}
+
 .f-prt1 h3 {
     font-weight: 100;
 }
@@ -1174,8 +1179,8 @@ footer p {
     }
 
     .p1-bcard p {
-        width: 100%;
-        margin: 5% 0;
+        width: 95%;
+        margin: 5% auto;
     }
 
     .page2 h1 {
@@ -1322,6 +1327,10 @@ footer p {
         height: 32vmax;
     }
 
+    .p1-bcard p {
+        width: 100%;
+    }
+
 }
 
 @media (max-width: 320px) {
@@ -1330,12 +1339,20 @@ footer p {
         grid-row-gap: 35px;
     }
 
+    .p1-bottom {
+        padding-bottom: 10%;
+    }
+
 }
 
 @media (max-width: 300px) {
 
     .p1-bottom .p1-belems {
-        grid-row-gap: 40px;
+        grid-row-gap: 55px;
+    }
+
+    .p1-bottom {
+        padding-bottom: 20%;
     }
 
 }
