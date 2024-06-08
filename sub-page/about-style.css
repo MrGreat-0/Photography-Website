@@ -10,6 +10,7 @@ html,
 body {
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 
 body {
@@ -40,7 +41,7 @@ nav {
     align-items: center;
     position: relative;
     padding: 1vw 4vw;
-    /* border-bottom: 0.1px solid grey; */
+    border-bottom: 0.1px solid grey;
 }
 
 .menu {
@@ -52,7 +53,7 @@ nav {
 }
 
 nav img {
-    width: clamp(4vmax, 3vw, 3.5vmax);
+    width: 3.5vmax;
 }
 
 .nav-prt {
@@ -69,7 +70,7 @@ nav img {
 }
 
 .nav-prt a {
-    font-size: clamp(0.8rem, 1.3vw, 1.1rem);
+    font-size: 1.1rem;
     text-decoration: none;
     font-weight: 100;
     color: #fff;
@@ -116,6 +117,7 @@ nav img {
 }
 
 article {
+    height: calc(100vh - 10vh);
     height: auto;
     width: 100%;
     position: relative;
@@ -124,8 +126,8 @@ article {
 
 .blob {
     background-image: url(https://plus.unsplash.com/premium_photo-1682124752476-40db22034a58?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-    width: clamp(12.5rem, 15vw, 15rem);
-    height: clamp(11.5rem, 15vw, 15rem);
+    width: 15rem;
+    height: 15rem;
     background-size: cover;
     -webkit-background-position: center;
     background-position: center center;
@@ -163,40 +165,53 @@ article {
 }
 
 .abt {
+    min-height: calc(100vh - 10vh+15rem);
     height: auto;
     width: 100%;
 }
 
 .abt h1 {
     font-weight: 100;
-    font-size: clamp(2rem, 3.5vw, 3.5rem);
+    font-size: 3.5rem;
 }
 
 .abt p {
     width: 85%;
     margin: 0 auto;
     font-weight: 100;
-    font-size: clamp(1.2rem, 2vw, 2rem);
+    font-size: 2rem;
     line-height: 1.5;
 }
 
+
 @media (max-width:992px) {
+
+    html {
+        font-size: 90%;
+    }
 
     nav {
         height: 9vh;
+    }
+
+    article {
+        min-height: calc(100vh - 9vh);
     }
 
 }
 
 @media (max-width:768px) {
 
-    html,
-    body {
-        overflow-x: hidden;
+    html {
+        font-size: 62.5%;
     }
 
     nav {
         height: 8vh;
+    }
+
+    nav img {
+        width: 4vmax;
     }
 
     .menu i {
@@ -229,7 +244,7 @@ article {
     }
 
     .nav-prt a {
-        font-size: 2rem;
+        font-size: 3rem;
         font-weight: 500;
     }
 
@@ -253,6 +268,15 @@ article {
         transform: scalex(0);
     }
 
+    .blob {
+        height: 22rem;
+        width: 24rem;
+    }
+
+    article {
+        min-height: calc(100vh - 8vh);
+    }
+
     .abt p {
         width: 85%;
     }
@@ -261,26 +285,49 @@ article {
 
 @media (max-width:550px) {
 
-    html,
-    body {
-        overflow-y: hidden;
-    }
-
     nav {
         height: 7vh;
     }
 
+    article {
+        min-height: calc(100vh - 7vh);
+    }
+
+    .blob {
+        height: 18rem;
+        width: 20rem;
+    }
+
 }
 
-@media (max-width:410px) {
+@media (max-width:420px) {
 
-    html,
-    body {
-        overflow-y: auto;
+    html {
+        font-size: 60%;
     }
 
     .abt p {
         width: 90%;
+    }
+
+}
+
+@media (max-width:350px) {
+
+    html {
+        font-size: 53%;
+    }
+
+    .abt p {
+        width: 95%;
+    }
+
+}
+
+@media (max-width:300px) {
+
+    html {
+        font-size: 50%;
     }
 
 }

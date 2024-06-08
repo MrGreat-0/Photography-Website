@@ -10,7 +10,7 @@ html,
 body {
     height: 100%;
     width: 100%;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 body {
@@ -41,7 +41,7 @@ nav {
     align-items: center;
     position: relative;
     padding: 1vw 4vw;
-    /* border-bottom: 0.1px solid grey; */
+    border-bottom: 0.1px solid grey;
 }
 
 .menu {
@@ -161,11 +161,6 @@ nav img {
 
 @media (max-width:768px) {
 
-    html,
-    body {
-        overflow-x: hidden;
-    }
-
     nav {
         height: 8vh;
     }
@@ -240,11 +235,6 @@ nav img {
 
 @media (max-width:550px) {
 
-    html,
-    body {
-        overflow: hidden;
-    }
-
     nav {
         height: 7vh;
     }
@@ -259,16 +249,6 @@ nav img {
 
     .info p a {
         font-size: 1.3rem;
-    }
-
-}
-
-@media (max-width:410px) {
-
-    html,
-    body {
-        overflow-x: hidden;
-        overflow-y: auto;
     }
 
 }
@@ -292,7 +272,15 @@ nav img {
 @media (max-width:330px) {
 
     .info p {
-        width: 95%;
+        width: 96%;
+    }
+
+}
+
+@media (max-width:300px) {
+
+    .info p {
+        width: 100%;
     }
 
 }
