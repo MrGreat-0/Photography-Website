@@ -132,71 +132,30 @@ let mmm = gsap.matchMedia();
 
 mm.add("(max-width: 768px)", () => {
 
-    mtl.to("#contain-nav",{
-        right:0,
-        duration:0.5
+    mtl.to("#contain-nav", {
+        right: 0,
+        duration: 0.5
     })
-    
-    mtl.from(".nav-prt a",{
-        duration:0.76,
-        x:150,
-        stagger:0.2,
-        opacity:0
+
+    mtl.from(".nav-prt a", {
+        duration: 0.76,
+        x: 150,
+        stagger: 0.2,
+        opacity: 0
     })
-    
-    mtl.from("#contain-nav .m-btn",{
-        opacity:0
+
+    mtl.from("#contain-nav .m-btn", {
+        opacity: 0
     })
-    
+
     mtl.pause();
-    
-    menu.addEventListener("click",function(){
+
+    menu.addEventListener("click", function () {
         mtl.play();
     })
-    
-    cross.addEventListener("click",function(){
+
+    cross.addEventListener("click", function () {
         mtl.reverse();
     })
 
 });
-
-// ------------------------------------Loader-------------------------------------- //
-
-
-// // Function to show the loader
-// function showLoader() {
-//     document.querySelector(".loader").style.display = "block";
-//   }
-  
-//   // Function to hide the loader
-//   function hideLoader() {
-//     document.querySelector(".loader").style.display = "none";
-//   }
-  
-//   // Function to check network status and load content accordingly
-//   function handleNetworkAndContentLoad() {
-//     // Check if the browser is online
-//     if (navigator.onLine) {
-//       // Show loader when DOM content starts loading
-//       showLoader();
-  
-//       // Hide loader when all content including images and stylesheets are loaded
-//       window.addEventListener('load', function() {
-//         hideLoader();
-//       });
-//     } else {
-//       // If browser is offline, always show loader
-//       showLoader();
-//     }
-  
-//     // Hide loader when DOM content is fully loaded
-//     document.addEventListener('DOMContentLoaded', function() {
-//       hideLoader();
-//     });
-//   }
-  
-//   // Call the function to handle network and content load
-//   handleNetworkAndContentLoad();
-  
-
-// ------------------------- //
