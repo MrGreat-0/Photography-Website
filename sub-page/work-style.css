@@ -10,9 +10,11 @@ html,
 body {
     height: 100%;
     width: 100%;
+}
+
+body {
     color: #fff;
     -webkit-tap-highlight-color: transparent;
-    overflow-x: hidden;
 }
 
 main {
@@ -23,77 +25,6 @@ main {
     position: relative;
     display: flow-root;
 }
-
-/* ----------------Full Screen Image View-------------- */
-
-/* .popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    width: 80%;
-    height: 90vh;
-    background: rgba(0, 0, 0, 0.75);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    transition: 1s ease-in-out;
-    z-index: 99;
-    opacity: 0;
-}
-
-.popup:active{
-    transform: translate(-50%,-50%) scale(1);
-    opacity: 1;
-}
-
-.popup:active .close-btn,
-.popup:active .arrow,
-.popup:active .large-img{
-    opacity: 1;
-    transition: all 0.5s ease-in-out;
-    transition-delay: 1s;
-}
-
-.top-bar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50px;
-}
-
-.close-btn {
-    float: right;
-    margin: 1vw;
-    opacity: 0;
-}
-
-.arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 10;
-}
-
-.left-arrow {
-    left: 10px;
-}
-
-.right-arrow{
-    right: 10px;
-}
-
-.large-img{
-    margin-top: 5%;
-    width: 80%;
-    height: 80%;
-    object-fit: contain;
-    opacity: 0;
-} */
-
-/* ------------------------------------ */
 
 #top {
     height: 10vh;
@@ -115,7 +46,7 @@ nav {
     align-items: center;
     position: relative;
     padding: 1vw 4vw;
-    border-bottom: 0.1px solid grey;
+    /* border-bottom: 0.1px solid grey; */
 }
 
 .menu {
@@ -259,9 +190,92 @@ nav img {
 }
 
 .bar a:active {
-    -webkit-transform: scale(0.8);
-    -ms-transform: scale(0.8);
-    transform: scale(0.8);
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+}
+
+/* Style for the form container */
+.edit-section {
+    width: 20%;
+    margin: 5% auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+/* Style for the form heading */
+.edit-section h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Style for labels */
+.edit-section label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Style for label "Category" */
+.edit-section label[for="category"] {
+    /* Add your styles for the "Category" label here */
+    color: #000;
+    font-weight: 100;
+}
+
+/* Style for label "Upload" */
+.edit-section label[for="image"] {
+    /* Add your styles for the "Upload" label here */
+    color: #000;
+    font-weight: 100;
+}
+
+/* Style for input fields */
+.edit-section input[type="file"],
+.edit-section select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* Ensure padding and border are included in the width */
+}
+
+/* Style for submit button */
+.edit-section .add-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Hover effect for submit button */
+.edit-section .add-btn:hover {
+    background-color: #0056b3;
+}
+
+.bar .out-btn {
+    text-decoration: none;
+    background: aqua;
+    color: #000;
+    font-size: 1.2rem;
+    border: 0.5px solid #fff;
+    padding: 0.6vw 1.5vw;
+    border-radius: 5px;
+    display: none;
+}
+
+.bar .out-btn:active {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
 }
 
 .box {
@@ -358,6 +372,13 @@ nav img {
     object-position: center;
 }
 
+@media (max-width:1200px) {
+
+    .edit-section {
+        width: 35%;
+    }
+
+}
 
 @media (max-width:992px) {
 
@@ -369,9 +390,18 @@ nav img {
         height: 9vh;
     }
 
+    .edit-section {
+        width: 40%;
+    }
+
 }
 
 @media (max-width:768px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
 
     html {
         font-size: 95%;
@@ -433,6 +463,10 @@ nav img {
 
     .menu i {
         font-size: 4vw;
+    }
+
+    .edit-section {
+        width: 50%;
     }
 
     .bar {
@@ -560,6 +594,10 @@ nav img {
     .bar {
         -ms-grid-columns: (20vw)(3);
         grid-template-columns: repeat(3, 20vw);
+    }
+
+    .edit-section {
+        width: 60%;
     }
 
     .box {
