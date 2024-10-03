@@ -44,7 +44,7 @@ nav {
     align-items: center;
     position: relative;
     padding: 1vw 4vw;
-    /* border-bottom: 0.1px solid grey; */
+    border-bottom: 0.1px solid grey;
 }
 
 .menu {
@@ -292,36 +292,6 @@ main {
     grid-column-gap: 0px;
     grid-row-gap: 26px;
     position: relative;
-}
-
-.p1-bottom .p1-belems>*:nth-child(1) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-}
-
-.p1-bottom .p1-belems>*:nth-child(2) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
-}
-
-.p1-bottom .p1-belems>*:nth-child(3) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 5;
-}
-
-.p1-bottom .p1-belems>*:nth-child(4) {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-}
-
-.p1-bottom .p1-belems>*:nth-child(5) {
-    -ms-grid-row: 3;
-    -ms-grid-column: 3;
-}
-
-.p1-bottom .p1-belems>*:nth-child(6) {
-    -ms-grid-row: 3;
-    -ms-grid-column: 5;
 }
 
 .p1-belems .p1-bcard {
