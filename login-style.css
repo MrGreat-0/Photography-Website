@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    -webkit-tap-highlight-color: transparent;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* background: #000; */
+}
+
+body video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+main {
+    height: auto;
+    min-width: 25%;
+    text-align: center;
+    position: relative;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    padding: 5% 3% 5% 3%;
+    z-index: 1;
+}
+
+form {
+    position: relative;
+}
+
+main h1 {
+    font-size: clamp(1rem, 3vw, 3rem);
+    color: #fff;
+}
+
+.input-box {
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    position: relative;
+
+}
+
+.input-box input {
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    color: #fff;
+    font-size: clamp(0.8rem, 1.2vw, 1rem);
+    padding: 3% 9% 3% 3%;
+}
+
+.input-box input::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.input-box input::-moz-placeholder {
+    color: #fff;
+}
+
+.input-box input:-ms-input-placeholder {
+    color: #fff;
+}
+
+.input-box input::-ms-input-placeholder {
+    color: #fff;
+}
+
+.input-box input::placeholder {
+    color: #fff;
+}
+
+.input-box i {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: clamp(15px, 1.3vw, 20px);
+}
+
+.remember-forget {
+    position: relative;
+}
+
+.remember-forget a {
+    text-decoration: none;
+    color: #fff;
+    font-size: clamp(0.8rem, 1.2vw, 1rem);
+}
+
+.remember-forget a:hover {
+    text-decoration: underline;
+}
+
+main .btn {
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 1rem;
+    font-size: 100;
+    margin: 10px 0 30px 0;
+    color: #333;
+}
+
+.back-btn i {
+    color: #333;
+}
+
+.back-btn a {
+    text-decoration: none;
+    outline: none;
+}
+
+
+@media (max-width:1200px) {
+
+    main {
+        width: 35%;
+    }
+
+}
+
+@media (max-width:992px) {
+
+    main {
+        width: 45%;
+    }
+
+}
+
+@media (max-width:768px) {
+
+    main {
+        width: 55%;
+    }
+
+}
+
+@media (max-width:550px) {
+
+    main {
+        width: 60%;
+    }
+
+}
