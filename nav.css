@@ -1,31 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-html,
-body {
-    height: 100%;
-    width: 100%;
-}
-
-body {
-    color: #fff;
-    -webkit-tap-highlight-color: transparent;
-}
-
-main {
-    height: auto;
-    min-height: 100vh;
-    display: flow-root;
-    width: 100%;
-    background-color: #000;
-    position: relative;
-}
-
 nav {
     height: 10vh;
     width: 100%;
@@ -77,15 +49,6 @@ nav img {
     position: relative;
 }
 
-.nav-prt > a:last-child {
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    background-image: -o-linear-gradient(left, rgba(199, 17, 59, 1) 5%, rgba(228, 94, 81, 1) 100%);
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(5%, rgba(199, 17, 59, 1)), to(rgba(228, 94, 81, 1)));
-    background-image: linear-gradient(90deg, rgba(199, 17, 59, 1) 5%, rgba(228, 94, 81, 1) 100%);
-}
-
 .nav-prt a::before {
     content: "";
     height: 0.5px;
@@ -115,37 +78,9 @@ nav img {
     transform: scalex(1);
 }
 
-.info {
-    min-height: calc(100vh - 10vh);
-    height: auto;
-    width: 100%;
-    position: relative;
-    text-align: center;
-    padding-top: 7%;
+body.no-scroll {
+    overflow: hidden;
 }
-
-.info h1 {
-    font-weight: 100;
-    font-size: 3.5rem;
-    padding: 2vw 0;
-}
-
-.info p {
-    height: auto;
-    width: 80%;
-    font-weight: 100;
-    font-size: 2rem;
-    line-height: 1.5;
-    margin: 0 auto;
-}
-
-.info p a {
-    text-decoration: none;
-    font-size: 1.75rem;
-    color: aqua;
-    text-decoration: underline;
-}
-
 
 @media (max-width:992px) {
 
@@ -153,29 +88,12 @@ nav img {
         height: 9vh;
     }
 
-    .info {
-        min-height: calc(100vh - 9vh);
-    }
-
 }
 
 @media (max-width:768px) {
 
-    html,
-    body {
-        overflow-x: hidden;
-    }
-
     nav {
         height: 8vh;
-    }
-
-    .info {
-        min-height: calc(100vh - 8vh);
-    }
-
-    .info p {
-        font-size: 1.8rem;
     }
 
     .menu {
@@ -204,7 +122,7 @@ nav img {
     }
 
     .nav-prt a {
-        font-size: 2rem;
+        font-size: 2.1rem;
         font-weight: 500;
     }
 
@@ -222,77 +140,36 @@ nav img {
         cursor: pointer;
     }
 
-    .nav-prt a:hover::before {
-        -webkit-transform: scalex(0);
-        -ms-transform: scalex(0);
-        transform: scalex(0);
+    .menu i {
+        font-size: 4vw;
+        cursor: pointer;
     }
 
     nav img {
         width: 4vmax;
     }
 
-    .menu i {
-        font-size: 4vw;
+    .nav-prt a:hover::before {
+        -webkit-transform: scalex(0);
+        -ms-transform: scalex(0);
+        transform: scalex(0);
     }
 
 }
 
 @media (max-width:550px) {
 
-    html,
-    body {
-        overflow: hidden;
-    }
 
     nav {
         height: 7vh;
     }
 
-    .info {
-        min-height: calc(100vh - 7vh);
+    .m-btn {
+        font-size: 1.7rem;
     }
 
-    .info p {
-        font-size: 1.3rem;
-    }
-
-    .info p a {
-        font-size: 1.3rem;
-    }
-
-}
-
-@media (max-width:410px) {
-
-    html,
-    body {
-        overflow-x: hidden;
-        overflow-y: auto;
-    }
-
-}
-
-@media (max-width:390px) {
-
-    .info p {
-        width: 85%;
-    }
-
-}
-
-@media (max-width:360px) {
-
-    .info p {
-        width: 90%;
-    }
-
-}
-
-@media (max-width:330px) {
-
-    .info p {
-        width: 95%;
+    .nav-prt a {
+        font-size: 2.3rem;
     }
 
 }

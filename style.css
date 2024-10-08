@@ -30,95 +30,6 @@ header {
     background-color: #000;
 }
 
-nav {
-    height: 10vh;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    position: relative;
-    padding: 1vw 4vw;
-    border-bottom: 0.1px solid grey;
-}
-
-.menu {
-    display: none;
-}
-
-.m-btn {
-    display: none;
-}
-
-nav img {
-    width: 3.5vmax;
-}
-
-.nav-prt {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    position: relative;
-}
-
-.nav-prt a {
-    font-size: 1.1rem;
-    text-decoration: none;
-    font-weight: 100;
-    color: #fff;
-    margin: 0 1vw;
-    position: relative;
-}
-
-.nav-prt>a:first-child {
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    background-image: -o-linear-gradient(left, rgba(199, 17, 59, 1) 5%, rgba(228, 94, 81, 1) 100%);
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(5%, rgba(199, 17, 59, 1)), to(rgba(228, 94, 81, 1)));
-    background-image: linear-gradient(90deg, rgba(199, 17, 59, 1) 5%, rgba(228, 94, 81, 1) 100%);
-}
-
-.nav-prt a::before {
-    content: "";
-    height: 0.5px;
-    width: 100%;
-    border-radius: 10px;
-    background-color: #fff;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    -webkit-transform: scalex(0);
-    -ms-transform: scalex(0);
-    transform: scalex(0);
-    -webkit-transition: all 0.25s ease;
-    -o-transition: all 0.25s ease;
-    transition: all 0.25s ease;
-    background-image: -o-linear-gradient(left, rgba(199, 17, 59, 1) 5%, rgba(228, 94, 81, 1) 100%);
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(5%, rgba(199, 17, 59, 1)), to(rgba(228, 94, 81, 1)));
-    background-image: linear-gradient(90deg, rgba(199, 17, 59, 1) 5%, rgba(228, 94, 81, 1) 100%);
-}
-
-.nav-prt a:hover::before {
-    -webkit-transform: scalex(1);
-    -ms-transform: scalex(1);
-    transform: scalex(1);
-}
-
 header .h-bg {
     height: auto;
     height: calc(100vh - 10vh);
@@ -631,6 +542,7 @@ main {
     -webkit-transition: opacity 0.3s;
     -o-transition: opacity 0.3s;
     transition: opacity 0.3s;
+    font-size: clamp(0.7rem, 2.5vw, 1.15rem);
 }
 
 .p3-card:hover h5 {
@@ -714,15 +626,19 @@ footer p {
     color: #fff;
 }
 
+@media (min-width: 768px) and (max-width: 1200px) {
+
+    .p3-container .p3-card {
+        height: auto;
+    }
+
+}
+
 
 @media (max-width:992px) {
 
     html {
         font-size: 90%;
-    }
-
-    nav {
-        height: 9vh;
     }
 
     .h-bg {
@@ -742,10 +658,6 @@ footer p {
         font-size: 95%;
     }
 
-    nav {
-        height: 8vh;
-    }
-
     .h-bg {
         min-height: calc(100vh - 8vh);
     }
@@ -755,65 +667,6 @@ footer p {
         width: 60%;
         text-transform: uppercase;
         padding-left: 6vw;
-    }
-
-    .menu {
-        display: block;
-    }
-
-    #contain-nav {
-        height: 100vh;
-        width: 100%;
-        position: absolute;
-        background: #ffffff56;
-        top: 0;
-        right: -100%;
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
-        padding: 150px 60px;
-        z-index: 999;
-    }
-
-    .nav-prt {
-        height: 80%;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-    }
-
-    .nav-prt a {
-        font-size: 2.1rem;
-        font-weight: 500;
-    }
-
-    .m-btn {
-        display: block;
-        position: absolute;
-        top: 5%;
-        right: 10%;
-        padding: 0.5vw;
-        border-radius: 50%;
-        font-size: 1.5rem;
-        background-color: #ffffff;
-        text-decoration: none;
-        border: none;
-        cursor: pointer;
-    }
-
-    .menu i {
-        font-size: 4vw;
-        cursor: pointer;
-    }
-
-    nav img {
-        width: 4vmax;
-    }
-
-    .nav-prt a:hover::before {
-        -webkit-transform: scalex(0);
-        -ms-transform: scalex(0);
-        transform: scalex(0);
     }
 
     header .h-bg h1 {
@@ -950,6 +803,7 @@ footer p {
 
     .p3-card .p3-elem2 h5 {
         opacity: 1;
+        font-weight: 300;
     }
 
     footer p {
@@ -966,18 +820,6 @@ footer p {
 
     html {
         font-size: 85%;
-    }
-
-    nav {
-        height: 7vh;
-    }
-
-    .m-btn {
-        font-size: 1.7rem;
-    }
-
-    .nav-prt a {
-        font-size: 2.3rem;
     }
 
     .h-bg {

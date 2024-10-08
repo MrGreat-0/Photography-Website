@@ -11,14 +11,14 @@
     <meta name="author" content="Shameem">
 
     <!-- Default Favicon -->
-    <link rel="shortcut icon" href="../logo/logo.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="logo/logo.ico" type="image/x-icon">
     <!-- Widely Used Favicon -->
-    <link rel="icon" href="../logo/logo-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="logo/logo-32x32.png" sizes="32x32" type="image/png">
     <!-- For Apple Mobile Devices -->
-    <link rel="apple-touch-icon-precomposed" href="../logo/logo-152x152.png" type="image/png" sizes="152x152">
-    <link rel="apple-touch-icon-precomposed" href="../logo/logo-120x120.png" type="image/png" sizes="120x120">
+    <link rel="apple-touch-icon-precomposed" href="logo/logo-152x152.png" type="image/png" sizes="152x152">
+    <link rel="apple-touch-icon-precomposed" href="logo/logo-120x120.png" type="image/png" sizes="120x120">
     <!-- Google TV Favicon -->
-    <link rel="icon" href="../logo/logo-96x96.png" sizes="96x96" type="image/png">
+    <link rel="icon" href="logo/logo-96x96.png" sizes="96x96" type="image/png">
 
     <!-- SEO Meta Tags -->
     <meta name="description"
@@ -31,7 +31,7 @@
     <meta property="og:description"
         content="Contact Perfect Moments Photography by Shameem for inquiries, bookings, or any questions you may have. Let's create timeless memories together.">
     <meta property="og:url" content="https://www.perfectmomentsphotography.in/contact">
-    <meta property="og:image" content="https://www.perfectmomentsphotography.in/images/contact-og-image.jpg">
+    <meta property="og:image" content="https://www.perfectmomentsphotography.in/images/h-bg.jpg">
     <meta property="og:type" content="website">
 
     <!-- Twitter Card -->
@@ -39,7 +39,7 @@
     <meta name="twitter:title" content="Perfect Moments Photography | Contact">
     <meta name="twitter:description"
         content="Contact Perfect Moments Photography by Shameem for inquiries, bookings, or any questions you may have. Let's create timeless memories together.">
-    <meta name="twitter:image" content="https://www.perfectmomentsphotography.in/images/contact-twitter-image.jpg">
+    <meta name="twitter:image" content="https://www.perfectmomentsphotography.in/images/h-bg.jpg">
 
     <!-- Additional SEO Meta Tags -->
     <meta name="robots" content="index, follow">
@@ -53,34 +53,19 @@
     <meta name="twitter:site" content="@YourTwitterHandle">
 
     <!-- Link to manifest.json -->
-    <link rel="manifest" href="../logo/site.webmanifest">
+    <link rel="manifest" href="logo/site.webmanifest">
 
     <!-- CSS and Font Imports -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="contact-style.css">
 </head>
 
-<body>
+<body class="contact-page">
 
     <main>
 
-        <nav>
-            <a href="../index.html"><img src="../logo/camera.jpg" alt="brand logo"></a>
-
-            <div class="menu">
-                <i class="ri-menu-line"></i>
-            </div>
-
-            <div id="contain-nav">
-                <button class="m-btn"><i class="ri-close-line"></i></button>
-                <div class="nav-prt">
-                    <a href="../index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="work.html">Work</a>
-                    <a href="">Contact</a>
-                </div>
-            </div>
-        </nav>
+        <nav></nav>
 
         <article class="info">
 
@@ -101,10 +86,13 @@
 
     </main>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/page.js/1.11.6/page.js"
+        integrity="sha512-MkYIEFfyoRmnQFt8ZoTflIGLT8RR+PfZSHtsG5Knc5uFayAspGft8XTaMIOozqD4KkGzE6xa7jU+tfWtcXMqtg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
-    <script src="contact-script.js" defer></script>
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="nav.js"></script>
 </body>
 
 </html>
