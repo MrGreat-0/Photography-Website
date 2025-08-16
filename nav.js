@@ -17,7 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector("nav").innerHTML = data;
             setupMenu(); // Call to set up menu after loading
             customizeNav();
-            if (window.location.pathname === '/') {
+            if (
+                window.location.pathname === '/' ||
+                window.location.pathname === '/photography-website/' ||
+                window.location.pathname.endsWith('index.html')
+            ) {
                 motion();
             }
         })
@@ -31,12 +35,12 @@ function customizeNav() {
 
     // Define the specific links for each page
     const pageLinks = {
-        'about.html': ['/Photography-Website/', '', 'work.html', 'contact.html'],
-        'work.html': ['/Photography-Website/', 'about.html', '', 'contact.html'],
-        'contact.html': ['/Photography-Website/', 'about.html', 'work.html', '']
+        'about.html': ['/photography-website/', '', 'work.html', 'contact.html'],
+        'work.html': ['/photography-website/', 'about.html', '', 'contact.html'],
+        'contact.html': ['/photography-website/', 'about.html', 'work.html', '']
     };
 
-    const currentLinks = pageLinks[currentPage] || ['/', 'about.html', 'work.html', 'contact.html'];
+    const currentLinks = pageLinks[currentPage] || ['/photography-website/', 'about.html', 'work.html', 'contact.html'];
 
     navLinks.forEach((link, index) => {
         link.setAttribute('href', currentLinks[index]);
@@ -125,11 +129,11 @@ function backBrowse() {
         const currentPath = window.location.pathname;
 
         if (currentPath === '/contact.html') {
-            editPath('./contact.html', '/');
+            editPath('./contact.html', '/photography-website/');
         } else if (currentPath === '/about.html') {
-            editPath('./about.html', '/');
+            editPath('./about.html', '/photography-website/');
         } else if (currentPath === '/work.html') {
-            editPath('./work.html', '/');
+            editPath('./work.html', '/photography-website/');
         }
     });
 
