@@ -1,0 +1,14 @@
+# robots.txt for Perfect Moments Photography
+
+# Allow all crawlers
+User-agent: *
+
+# Allow crawling of entire site
+Allow: /
+
+# Specify sitemap location
+Sitemap: https://perfectmomentsphotography.in/sitemap.xml
+
+# Disallow crawling of sensitive pages
+Disallow: /login.html
+Disallow: /private-dir/
