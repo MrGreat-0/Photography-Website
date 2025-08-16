@@ -31,9 +31,9 @@ function customizeNav() {
 
     // Define the specific links for each page
     const pageLinks = {
-        'about.html': ['/', '', 'work.html', 'contact.html'],
-        'work.html': ['/', 'about.html', '', 'contact.html'],
-        'contact.html': ['/', 'about.html', 'work.html', '']
+        'about.html': ['/Photography-Website/', '', 'work.html', 'contact.html'],
+        'work.html': ['/Photography-Website/', 'about.html', '', 'contact.html'],
+        'contact.html': ['/Photography-Website/', 'about.html', 'work.html', '']
     };
 
     const currentLinks = pageLinks[currentPage] || ['/', 'about.html', 'work.html', 'contact.html'];
